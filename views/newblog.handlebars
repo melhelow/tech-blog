@@ -1,11 +1,30 @@
 <h1>Create New Blog</h1>
 
 <form id="newblog-form">
-    <label>Title</label>
+    <label>Blog Title</label>
     <input type="text" id="input-title"/>
     <label>Content</label>
-    <input type="text" id="input-content"/>
-    <button type="submit">Submit</button>
+    <textarea type="text" id="input-content"></textarea>
+    <button type="submit">Create</button>
 </form>
+
+<div>
+  {{#if newblog.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Blogs:</h3>
+
+    {{#each newblog as |blog|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{blog.id}}">{{blog.title}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
 
 <script src="/js/newblog.js"></script>

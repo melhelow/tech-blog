@@ -9,11 +9,16 @@
 <body>
   <header>
     <nav>
-      <ul>
+       {{#if logged_in}}
+      
         <a href="/"><li>Home</li></a>
-        <a href="/login"><li>Login</li></a>
         <a href="/newblog"><li>New Blog</li></a>
-      </ul>
+         <button class="no-button" id="logout">logout</button>
+         {{else}}
+        <a href="/login"><li>Login</li></a>
+        {{/if}}
+       
+      
     </nav>
       {{!-- <div class="header"><h1><a href="#default" class="logo">Tech Blog</a>
       <div class="header-right">
@@ -21,7 +26,7 @@
       <a href="#dash-board">Dashboard</a>
       <a href="#Logout">Logout</a>
       --}}
-    </div>
+    {{!-- </div> --}}
   </header>
 
   <main>
@@ -29,7 +34,10 @@
   </main>
 
   <footer>
-    <h3>This is the footer</h3>
+
   </footer>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
