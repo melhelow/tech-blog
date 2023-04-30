@@ -1,0 +1,16 @@
+<h1>Homepage</h1>
+
+<h2> Welcome, {{username}}!</h2>
+
+<div class="blog-list">
+
+    {{#each blogs as |blog|}}
+        <div class="blog">
+            <h3>{{blog.title}}</h3>
+            <p>{{blog.content}}</p>
+        </div>
+
+    {{/each}}
+
+
+</div>

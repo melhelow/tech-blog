@@ -1,0 +1,9 @@
+.blog-list {
+    /* outline: 1px solid red; */
+}
+
+.blog {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
