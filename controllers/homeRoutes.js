@@ -26,6 +26,9 @@ router.get("/login", (req, res) => {
 router.get("/newblog", (req, res) => {
     res.render("newblog")
 })
+router.get("/profile", (req, res) => {
+    res.render("profile");
+})
  
 
 module.exports = router;
