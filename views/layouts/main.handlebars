@@ -9,16 +9,18 @@
 <body>
   <header>
     <nav>
-       {{#if logged_in}}
+      <ul>
+       
       
         <a href="/"><li>Home</li></a>
+        {{#if logged_in}}
         <a href="/newblog"><li>New Blog</li></a>
          <button class="no-button" id="logout">logout</button>
          {{else}}
         <a href="/login"><li>Login</li></a>
         {{/if}}
        
-      
+      </ul>
     </nav>
       {{!-- <div class="header"><h1><a href="#default" class="logo">Tech Blog</a>
       <div class="header-right">
