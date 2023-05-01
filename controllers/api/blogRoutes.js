@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
     blog.create({
         title: req.body.title,
-        content: req.body.content
+        content: req.body.content,
+        date_created:req.body.date_created
     })
     .then((result) => {
         res.json(result)

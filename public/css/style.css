@@ -1,9 +1,16 @@
-.blog-list {
-    /* outline: 1px solid red; */
-}
 
+/* nav  {
+    background-color: blue;
+} */
 .blog {
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
+    background-color: aquamarine;
+}
+body {
+    background-color: blueviolet;
+}
+header {
+    background-color: beige;
 }
