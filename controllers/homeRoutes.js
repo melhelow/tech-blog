@@ -31,10 +31,10 @@ router.get("/newblog", (req, res) => {
 router.get("/profile", (req, res) => {
     res.render("profile");
 })
- 
 router.get("/newblog", withAuth, (req, res) => {
     res.render("newblog")
 })
+
 
 module.exports = router;
 
