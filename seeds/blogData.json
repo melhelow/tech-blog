@@ -1,0 +1,15 @@
+[
+    {
+      "title": "CSS",
+      "content": "CSS is for styling."
+      
+    },
+    {
+        "title": "java script",
+        "content": "java script is for functionality."
+    },
+    {
+        "title": "API",
+        "content": "we can fetch data."
+    }
+  ]
