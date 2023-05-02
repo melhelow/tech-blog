@@ -33,21 +33,21 @@ router.get("/newblog", (req, res) => {
 router.get("/profile", (req, res) => {
     res.render("profile");
 })
-router.get("/newblog", withAuth, (req, res) => {
-    blog.findAll({
-        where : {
+// router.get("/newblog", withAuth, (req, res) => {
+//     blog.findAll({
+//         where : {
 
-        }
-    }).then ((results) =>{
-        console.log(results)
-        const data = results.map(result => result.get({ plain:true}))
-        res.render("newblog", {
-            username:"",
-            blogs:data
-        })
-    })
-    res.render()
-})
+//         }
+//     }).then ((results) =>{
+//         console.log(results)
+//         const data = results.map(result => result.get({ plain:true}))
+//         res.render("newblog", {
+//             username:"",
+//             blogs:data
+//         })
+//     })
+//     res.render()
+// })
 
 
 module.exports = router;
