@@ -34,7 +34,19 @@ router.get("/profile", (req, res) => {
     res.render("profile");
 })
 router.get("/newblog", withAuth, (req, res) => {
-    res.render("newblog")
+    blog.findAll({
+        where : {
+
+        }
+    }).then ((results) =>{
+        console.log(results)
+        const data = results.map(result => result.get({ plain:true}))
+        res.render("newblog", {
+            username:"",
+            blogs:data
+        })
+    })
+    res.render()
 })
 
 
