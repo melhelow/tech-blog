@@ -19,6 +19,8 @@ router.get("/", (req, res) => {
     
 })
 
+
+
 router.get("/login", (req, res) => {
     res.render("login")
 })
@@ -30,6 +32,9 @@ router.get("/profile", (req, res) => {
     res.render("profile");
 })
  
+router.get("/newblog", withAuth, (req, res) => {
+    res.render("newblog")
+})
 
 module.exports = router;
 

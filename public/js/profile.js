@@ -5,7 +5,7 @@ const newFormHandler = async (event) => {
     const content = document.querySelector('#blog-desc').value.trim();
   
     if (name && content) {
-      const response = await fetch(`/api/blogs`, {
+      const response = await fetch(`/api/blog`, {
         method: 'POST',
         body: JSON.stringify({ name, content }),
         headers: {
@@ -14,7 +14,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/newblog');
       } else {
         alert('Failed to create blog');
       }
@@ -25,12 +25,12 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/blogs/${id}`, {
+      const response = await fetch(`/api/blog/${id}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/newblog');
       } else {
         alert('Failed to delete blog');
       }
